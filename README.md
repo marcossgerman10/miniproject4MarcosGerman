@@ -57,7 +57,6 @@ Logout.
 
 ## Authors
 Marcos German
-GitHub Profile
 
 ## Version History
 1.0
