@@ -1,0 +1,19 @@
+{% extends 'habits/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Edit Habit</h2>
+    <form method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.name.label_tag }}
+            {{ form.name|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            {{ form.frequency.label_tag }}
+            {{ form.frequency|add_class:"form-select" }}
+        </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success">Save Changes</button>
+            <a href="{% url 'index' %}" class="btn btn-secondary">Cancel</a>
+

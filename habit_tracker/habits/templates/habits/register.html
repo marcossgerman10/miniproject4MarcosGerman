@@ -1,0 +1,26 @@
+{% extends 'habits/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center">Register</h2>
+    <form method="POST" class="mt-4">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.username.label_tag }}
+            {{ form.username|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            {{ form.password1.label_tag }}
+            {{ form.password1|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            {{ form.password2.label_tag }}
+            {{ form.password2|add_class:"form-control" }}
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+    </form>
+    <p class="text-center mt-3">
+        Already have an account? <a href="{% url 'login' %}" class="text-primary">Login here</a>.
+    </p>
+</div>
+{% endblock %}
