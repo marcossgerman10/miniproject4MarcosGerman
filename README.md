@@ -22,24 +22,32 @@ Ensure you have the following installed before proceeding:
 
 Install Python dependencies via pip:
 
+```
 pip install -r requirements.txt
+```
 
 ### Installing
 Clone the project from the GitHub repository:
-
+```
 git clone https://github.com/marcossgerman10/miniproject4MarcosGerman.git  
+```
+```
 cd habit_tracker  
-
+```
 -Perform database migrations:
+```
 python manage.py makemigrations  
 python manage.py migrate  
+```
 
 -Create a superuser for accessing the admin panel:
+```
 python manage.py createsuperuser  
-
+```
 -Start the development server:
+```
 python manage.py runserver  
-
+```
 ### Executing Program
 Access the application in your browser at:
 
